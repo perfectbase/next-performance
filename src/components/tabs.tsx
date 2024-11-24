@@ -22,7 +22,7 @@ export function Tabs({
 
   return (
     <div className="flex gap-2">
-      <Link href={pathPrefix} passHref prefetch={prefetch}>
+      <Link href={pathPrefix} passHref prefetch={true}>
         <Button variant={!pathId ? "default" : "secondary"}>Home</Button>
       </Link>
       {tabs.map((tab) => (
