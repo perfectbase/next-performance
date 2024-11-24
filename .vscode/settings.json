@@ -1,0 +1,11 @@
+{
+  "workbench.colorCustomizations": {
+    "[Cobalt2]": {
+      "editorIndentGuide.activeBackground1": "#d2cf01",
+      "editorWhitespace.foreground": "#ffffff30"
+    },
+    "activityBar.background": "#293012",
+    "titleBar.activeBackground": "#394419",
+    "titleBar.activeForeground": "#FAFCF6"
+  }
+}
