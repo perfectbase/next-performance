@@ -1,3 +1,3 @@
 export default function Page() {
-  return <div>HOME</div>;
+  return "Static Page 3";
 }
