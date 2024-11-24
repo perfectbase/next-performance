@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Sidebar,
   SidebarContent,
@@ -10,6 +12,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { usePathname } from "next/navigation";
 
 const items = [
   {
@@ -17,11 +20,11 @@ const items = [
     items: [
       {
         title: "Static",
-        url: "#",
+        url: "/pages/static",
       },
       {
         title: "Dynamic",
-        url: "#",
+        url: "/pages/dynamic",
       },
     ],
   },
@@ -30,49 +33,51 @@ const items = [
     items: [
       {
         title: "Static",
-        url: "#",
+        url: "/app/static",
       },
       {
         title: "Dynamic",
-        url: "#",
+        url: "/app/dynamic",
       },
       {
         title: "Suspense",
-        url: "#",
+        url: "/app/suspense",
       },
       {
         title: "Loading",
-        url: "#",
+        url: "/app/loading",
       },
       {
         title: "Edge Runtime",
-        url: "#",
+        url: "/app/edge-runtime",
       },
       {
         title: "Client Cache",
-        url: "#",
+        url: "/app/client-cache",
       },
       {
         title: "Server Cache",
-        url: "#",
+        url: "/app/server-cache",
       },
       {
-        title: "PPR",
-        url: "#",
+        title: "Partial Prerendering",
+        url: "/app/partial-prerendering",
       },
       {
         title: "Prefetch",
-        url: "#",
+        url: "/app/prefetch",
       },
       {
         title: "Image Prefetch",
-        url: "#",
+        url: "/app/image-prefetch",
       },
     ],
   },
 ];
 
 export function AppSidebar() {
+  const pathname = usePathname();
+
   return (
     <Sidebar>
       <SidebarHeader />
@@ -86,7 +91,10 @@ export function AppSidebar() {
               <SidebarMenu>
                 {group.items.map((item) => (
                   <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton asChild>
+                    <SidebarMenuButton
+                      asChild
+                      isActive={pathname?.startsWith(item.url)}
+                    >
                       <a href={item.url}>{item.title}</a>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
