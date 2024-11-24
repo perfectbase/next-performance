@@ -7,11 +7,13 @@ import { raise } from "@/lib/utils";
 
 export function Tabs({
   tabs,
+  prefetch,
 }: {
   tabs: {
     id: string;
     label?: string;
   }[];
+  prefetch?: boolean;
 }) {
   const pathname = usePathname();
   const pathSegments = pathname?.split("/") ?? raise("No pathname");
@@ -20,7 +22,7 @@ export function Tabs({
 
   return (
     <div className="flex gap-2">
-      <Link href={pathPrefix} passHref>
+      <Link href={pathPrefix} passHref prefetch={prefetch}>
         <Button variant={!pathId ? "default" : "secondary"}>Home</Button>
       </Link>
       {tabs.map((tab) => (
