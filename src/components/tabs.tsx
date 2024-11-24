@@ -20,6 +20,8 @@ export function Tabs({
   const pathId = pathSegments[3];
   const pathPrefix = pathSegments.slice(0, 3).join("/");
 
+  console.log(prefetch);
+
   return (
     <div className="flex gap-2">
       <Link href={pathPrefix} passHref prefetch={true}>
