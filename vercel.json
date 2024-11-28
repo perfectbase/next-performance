@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/app/client-cache",
+      "destination": "/app/dynamic"
+    }
+  ]
+}
