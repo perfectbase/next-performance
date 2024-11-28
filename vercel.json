@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/app-router/client-cache",
+      "destination": "https://next-performance-git-client-cache-perfectbases-projects.vercel.app/app/client-cache"
+    },
+    {
+      "source": "/app-router/client-cache/:path*",
+      "destination": "https://next-performance-git-client-cache-perfectbases-projects.vercel.app/app/client-cache/:path*"
+    }
+  ]
+}
