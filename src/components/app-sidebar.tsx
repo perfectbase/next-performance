@@ -20,11 +20,11 @@ const items = [
     items: [
       {
         title: "Static",
-        url: "/pages/static",
+        url: "/pages-router/static",
       },
       {
         title: "Dynamic",
-        url: "/pages/dynamic",
+        url: "/pages-router/dynamic",
       },
     ],
   },
@@ -33,43 +33,43 @@ const items = [
     items: [
       {
         title: "Static",
-        url: "/app/static",
+        url: "/app-router/static",
       },
       {
         title: "Dynamic",
-        url: "/app/dynamic",
+        url: "/app-router/dynamic",
       },
       {
         title: "Suspense",
-        url: "/app/suspense",
+        url: "/app-router/suspense",
       },
       {
         title: "Loading",
-        url: "/app/loading",
+        url: "/app-router/loading",
       },
       {
         title: "Edge Runtime",
-        url: "/app/edge-runtime",
+        url: "/app-router/edge-runtime",
       },
       {
         title: "Client Cache",
-        url: "/app/client-cache",
+        url: "/app-router/client-cache",
       },
       {
         title: "Server Cache",
-        url: "/app/server-cache",
+        url: "/app-router/server-cache",
       },
       {
         title: "Partial Prerendering",
-        url: "/app/partial-prerendering",
+        url: "/app-router/partial-prerendering",
       },
       {
         title: "Prefetch",
-        url: "/app/prefetch",
+        url: "/app-router/prefetch",
       },
       {
         title: "Image Prefetch",
-        url: "/app/image-prefetch",
+        url: "/app-router/image-prefetch",
       },
     ],
   },
