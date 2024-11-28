@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/app/client-cache",
+      "source": "/app/client-:path*",
       "destination": "/app/dynamic"
     }
   ]
