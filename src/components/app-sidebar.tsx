@@ -20,11 +20,11 @@ const items = [
     items: [
       {
         title: "Static",
-        url: "/pages-router/static",
+        url: "https://nextperformance.vercel.app/pages-router/static",
       },
       {
         title: "Dynamic",
-        url: "/pages-router/dynamic",
+        url: "https://nextperformance.vercel.app/pages-router/dynamic",
       },
     ],
   },
@@ -33,23 +33,23 @@ const items = [
     items: [
       {
         title: "Static",
-        url: "/app-router/static",
+        url: "https://nextperformance.vercel.app/app-router/static",
       },
       {
         title: "Dynamic",
-        url: "/app-router/dynamic",
+        url: "https://nextperformance.vercel.app/app-router/dynamic",
       },
       {
         title: "Suspense",
-        url: "/app-router/suspense",
+        url: "https://nextperformance.vercel.app/app-router/suspense",
       },
       {
         title: "Loading",
-        url: "/app-router/loading",
+        url: "https://nextperformance.vercel.app/app-router/loading",
       },
       {
         title: "Edge Runtime",
-        url: "/app-router/edge-runtime",
+        url: "https://nextperformance.vercel.app/app-router/edge-runtime",
       },
       {
         title: "Client Cache",
@@ -57,19 +57,19 @@ const items = [
       },
       {
         title: "Server Cache",
-        url: "/app-router/server-cache",
+        url: "https://nextperformance.vercel.app/app-router/server-cache",
       },
       {
         title: "Partial Prerendering",
-        url: "/app-router/partial-prerendering",
+        url: "https://nextperformance.vercel.app/app-router/partial-prerendering",
       },
       {
         title: "Prefetch",
-        url: "/app-router/prefetch",
+        url: "https://nextperformance.vercel.app/app-router/prefetch",
       },
       {
         title: "Image Prefetch",
-        url: "/app-router/image-prefetch",
+        url: "https://nextperformance.vercel.app/app-router/image-prefetch",
       },
     ],
   },
