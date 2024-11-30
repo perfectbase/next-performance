@@ -68,8 +68,8 @@ const items = [
         url: "https://nextperformance.vercel.app/app-router/prefetch",
       },
       {
-        title: "Image Prefetch",
-        url: "https://nextperformance.vercel.app/app-router/image-prefetch",
+        title: "Almighty",
+        url: "https://nextperformance.vercel.app/app-router/almighty",
       },
     ],
   },
