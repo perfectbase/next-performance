@@ -68,8 +68,8 @@ const items = [
         url: "/app-router/prefetch",
       },
       {
-        title: "Image Prefetch",
-        url: "/app-router/image-prefetch",
+        title: "Almighty",
+        url: "/app-router/almighty",
       },
     ],
   },
