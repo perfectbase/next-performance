@@ -11,7 +11,7 @@ export default function Layout({
     <>
       <Card>
         <CardHeader>
-          <CardTitle>Almighty 😎</CardTitle>
+          <CardTitle>Almighty 🚀</CardTitle>
         </CardHeader>
         <CardContent>
           <Tabs
