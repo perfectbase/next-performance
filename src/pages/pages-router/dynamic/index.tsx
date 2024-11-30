@@ -1,8 +1,13 @@
+import { FeatureTags } from "@/components/feature-tags";
 import { Tabs } from "@/components/tabs-pages";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Page() {
-  return <DynamicPageLayout>HOME</DynamicPageLayout>;
+  return (
+    <DynamicPageLayout>
+      <FeatureTags pagesRouter dynamic />
+    </DynamicPageLayout>
+  );
 }
 
 export function DynamicPageLayout({

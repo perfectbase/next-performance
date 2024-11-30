@@ -1,8 +1,13 @@
+import { FeatureTags } from "@/components/feature-tags";
 import { Tabs } from "@/components/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Page() {
-  return <StaticPageLayout>HOME</StaticPageLayout>;
+  return (
+    <StaticPageLayout>
+      <FeatureTags pagesRouter static />
+    </StaticPageLayout>
+  );
 }
 
 export function StaticPageLayout({
