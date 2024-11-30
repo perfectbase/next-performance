@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import NextLink from "next/link";
 import { Button } from "./ui/button";
 import { usePathname } from "next/navigation";
 import { raise } from "@/lib/utils";
@@ -8,17 +8,20 @@ import { raise } from "@/lib/utils";
 export function Tabs({
   tabs,
   prefetch,
+  linkComponent,
 }: {
   tabs: {
     id: string;
     label?: string;
   }[];
   prefetch?: boolean;
+  linkComponent?: typeof NextLink;
 }) {
   const pathname = usePathname();
   const pathSegments = pathname?.split("/") ?? raise("No pathname");
   const pathId = pathSegments[3];
   const pathPrefix = pathSegments.slice(0, 3).join("/");
+  const Link = linkComponent ?? NextLink;
 
   return (
     <div className="flex gap-2">

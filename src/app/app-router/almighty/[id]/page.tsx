@@ -5,7 +5,6 @@ import Image from "next/image";
 export default async function Page(props: { params: Promise<{ id: string }> }) {
   return (
     <div>
-      Static Title
       <CachedDynamicComponent {...props} />
     </div>
   );
@@ -23,7 +22,15 @@ async function CachedDynamicComponent({
     <div className="grid grid-cols-3 gap-4">
       {data.map((item, index) => (
         <div key={index}>
-          <Image src={item.image} width={200} height={200} alt={item.name} />
+          <Image
+            src={item.image}
+            alt={item.name}
+            loading="eager"
+            decoding="sync"
+            width={200}
+            height={200}
+            className="w-full rounded-sm"
+          />
           <div>{item.name}</div>
         </div>
       ))}
