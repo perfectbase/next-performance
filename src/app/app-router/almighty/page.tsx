@@ -27,6 +27,15 @@ export default function Page() {
         triggers navigation on mouse down (as soon as you click instead of
         waiting for release).
       </Description>
+      <Description>
+        The mock data was generated with a{" "}
+        <TextLink href="https://blog.perfectbase.dev/building-an-ai-script-to-generate-mock-data-with-realistic-images">
+          custom script
+        </TextLink>{" "}
+        using <code>gpt-4o-mini</code> and <code>dall-e-3</code>. Images are
+        stored and served from{" "}
+        <TextLink href="https://edgestore.dev">Edge Store</TextLink>.
+      </Description>
       <Separator className="my-4" />
       <FeatureDescriptions
         appRouter

@@ -14,6 +14,11 @@ export default function Page() {
         Instead, there are two loading phases: one for navigation and another
         for data fetching.
       </Description>
+      <Description>
+        A workaround would be to make the loading component match the static
+        part of the page, but then you would need to build one loading for each
+        page layout you have.
+      </Description>
       <Separator className="my-4" />
       <FeatureDescriptions appRouter dynamic suspense loading />
     </div>

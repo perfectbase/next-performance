@@ -67,10 +67,10 @@ export function FeatureDescriptions(props: {
         <>
           <FeatureTags suspense />
           <Description>
-            The dynamic content is wrapped in a `Suspense` component, which
-            shows a loading spinner while data is fetched. The page doesn&apos;t
-            make an extra request to get the dynamic content—the content is
-            streamed from the initial page request itself.
+            The dynamic content is wrapped in a <code>Suspense</code> component,
+            which shows a loading spinner while data is fetched. The page
+            doesn&apos;t make an extra request to get the dynamic content—the
+            content is streamed from the initial page request itself.
           </Description>
         </>
       )}
@@ -133,7 +133,7 @@ export function FeatureDescriptions(props: {
         <>
           <FeatureTags prefetch />
           <Description>
-            The `Link` component is configured with{" "}
+            The <code>Link</code> component is configured with{" "}
             <code>{"prefetch={true}"}</code>, which tells Next.js to prefetch
             the entire page, including the dynamic content.
           </Description>
