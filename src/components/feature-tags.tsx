@@ -10,9 +10,9 @@ export function FeatureTags(props: {
   edgeRuntime?: boolean;
   clientCache?: boolean;
   serverCache?: boolean;
+  ppr?: boolean;
   prefetch?: boolean;
   imagePrefetch?: boolean;
-  ppr?: boolean;
   onMouseDown?: boolean;
 }) {
   return (
@@ -58,6 +58,9 @@ export function FeatureTags(props: {
           Server Cache
         </Tag>
       )}
+      {props.ppr && (
+        <Tag className="bg-cyan-100 text-cyan-800 border-cyan-200">PPR</Tag>
+      )}
       {props.prefetch && (
         <Tag className="bg-gray-100 text-gray-800 border-gray-200">
           Prefetch
@@ -67,9 +70,6 @@ export function FeatureTags(props: {
         <Tag className="bg-amber-100 text-amber-800 border-amber-200">
           Image Prefetch
         </Tag>
-      )}
-      {props.ppr && (
-        <Tag className="bg-cyan-100 text-cyan-800 border-cyan-200">PPR</Tag>
       )}
       {props.onMouseDown && (
         <Tag className="bg-lime-100 text-lime-800 border-lime-200">

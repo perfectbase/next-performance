@@ -1,6 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { parseHTML } from "linkedom";
 
+/**
+ * This API logic was introduced on the NextFaster project.
+ * @see https://github.com/ethanniser/NextFaster
+ */
+
 export const dynamic = "force-static";
 
 function getHostname() {

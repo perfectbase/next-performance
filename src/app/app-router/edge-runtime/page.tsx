@@ -1,5 +1,7 @@
 import { FeatureTags } from "@/components/feature-tags";
 import { Description } from "@/components/description";
+import { Separator } from "@/components/ui/separator";
+import { FeatureDescriptions } from "@/components/feature-descriptions";
 
 export default function Page() {
   return (
@@ -11,6 +13,8 @@ export default function Page() {
         The main drawback is that Edge Runtime doesn&apos;t support all Node.js
         features, which can cause compatibility issues with some libraries.
       </Description>
+      <Separator className="my-4" />
+      <FeatureDescriptions appRouter dynamic suspense edgeRuntime />
     </div>
   );
 }

@@ -4,6 +4,11 @@ import NextLink from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
+/**
+ * This component logic was introduced on the NextFaster project.
+ * @see https://github.com/ethanniser/NextFaster
+ */
+
 type PrefetchImage = {
   srcset: string;
   sizes: string;
