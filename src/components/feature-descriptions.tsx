@@ -1,4 +1,12 @@
+import {
+  CLIENT_CACHE_CODE,
+  PPR_CODE,
+  SERVER_CACHE_CODE,
+  SUSPENSE_CODE,
+} from "./feature-code-blocks";
 import { FeatureTags } from "./feature-tags";
+import { CodeBlock } from "./ui/code-block";
+import { InlineCode } from "./ui/inline-code";
 import { TextLink } from "./ui/text-link";
 
 export function FeatureDescriptions(props: {
@@ -34,11 +42,13 @@ export function FeatureDescriptions(props: {
         <>
           <FeatureTags appRouter />
           <Description>
-            This demo uses the App Router. Which is a newer way of developing
-            apps with Next.js. It supports nested layouts, provides built-in
-            solutions for loading states, error handling and data fetching. It
-            defaults to server components and makes it easy to stream additional
-            data from the initial page request.
+            This demo uses the{" "}
+            <TextLink href="https://nextjs.org/docs/app">App Router</TextLink>.
+            Which is a newer way of developing apps with Next.js. It supports
+            nested layouts, provides built-in solutions for loading states,
+            error handling and data fetching. It defaults to server components
+            and makes it easy to stream additional data from the initial page
+            request.
           </Description>
         </>
       )}
@@ -67,10 +77,14 @@ export function FeatureDescriptions(props: {
         <>
           <FeatureTags suspense />
           <Description>
-            The dynamic content is wrapped in a `Suspense` component, which
-            shows a loading spinner while data is fetched. The page doesn&apos;t
-            make an extra request to get the dynamic content—the content is
-            streamed from the initial page request itself.
+            The dynamic content is wrapped in a{" "}
+            <InlineCode>Suspense</InlineCode> component, which shows a loading
+            spinner while data is fetched. The page doesn&apos;t make an extra
+            request to get the dynamic content—the content is streamed from the
+            initial page request itself.
+            <CodeBlock language="tsx" highlightLines={[5, 7]}>
+              {SUSPENSE_CODE}
+            </CodeBlock>
           </Description>
         </>
       )}
@@ -78,8 +92,8 @@ export function FeatureDescriptions(props: {
         <>
           <FeatureTags loading />
           <Description>
-            There is a <code>loading.tsx</code> file in this route segment.
-            Loading files are cached and are displayed immediately when
+            There is a <InlineCode>loading.tsx</InlineCode> file in this route
+            segment. Loading files are cached and are displayed immediately when
             navigating to dynamic routes.
           </Description>
         </>
@@ -101,10 +115,13 @@ export function FeatureDescriptions(props: {
             The client cache is enabled. The client cache is a global
             configuration for the app. You can configure how long the cache
             should last for static and dynamic pages in the{" "}
-            <code>next.config.ts</code> file. This demo is configured to cache
-            dynamic pages for 30 seconds and static pages for 180 seconds, which
-            was the default in Next.js 14. (Since Next.js 15, the default is to
-            not cache).
+            <InlineCode>next.config.ts</InlineCode> file. This demo is
+            configured to cache dynamic pages for 30 seconds and static pages
+            for 180 seconds, which was the default in Next.js 14. (Since Next.js
+            15, the default is to not cache).
+            <CodeBlock language="ts" highlightLines={["3-6"]}>
+              {CLIENT_CACHE_CODE}
+            </CodeBlock>
           </Description>
         </>
       )}
@@ -114,7 +131,14 @@ export function FeatureDescriptions(props: {
           <Description>
             The dynamic content is being cached on the server-side. The cache is
             shared between all users. Cache revalidation can be scheduled or
-            triggered on demand.
+            triggered on demand. This demo is using{" "}
+            <InlineCode>unstable_cache</InlineCode> to cache the dynamic
+            content, but you might want to use the new experimental{" "}
+            <TextLink href="https://nextjs.org/docs/canary/app/api-reference/directives/use-cache">
+              <InlineCode>use cache</InlineCode>
+            </TextLink>{" "}
+            feature.
+            <CodeBlock language="tsx">{SERVER_CACHE_CODE}</CodeBlock>
           </Description>
         </>
       )}
@@ -126,6 +150,9 @@ export function FeatureDescriptions(props: {
             allows Next.js to combine static and dynamic content in a single
             page, serving a static shell instantly while streaming in dynamic
             content asynchronously.
+            <CodeBlock language="ts" highlightLines={[3]}>
+              {PPR_CODE}
+            </CodeBlock>
           </Description>
         </>
       )}
@@ -133,9 +160,12 @@ export function FeatureDescriptions(props: {
         <>
           <FeatureTags prefetch />
           <Description>
-            The `Link` component is configured with{" "}
-            <code>{"prefetch={true}"}</code>, which tells Next.js to prefetch
-            the entire page, including the dynamic content.
+            The <InlineCode>Link</InlineCode> component is configured with{" "}
+            <TextLink href="https://nextjs.org/docs/app/api-reference/components/link#prefetch">
+              <InlineCode>{"prefetch={true}"}</InlineCode>
+            </TextLink>
+            , which tells Next.js to prefetch the entire page, including the
+            dynamic content.
           </Description>
         </>
       )}
@@ -149,8 +179,8 @@ export function FeatureDescriptions(props: {
               NextFaster
             </TextLink>{" "}
             project. The main code you will want to check is the{" "}
-            <code>prefetch-images</code> api route and the custom{" "}
-            <code>link.tsx</code> component.
+            <InlineCode>prefetch-images</InlineCode> api route and the custom{" "}
+            <InlineCode>link.tsx</InlineCode> component.
           </Description>
         </>
       )}

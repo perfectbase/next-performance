@@ -12,78 +12,27 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { demos } from "@/lib/demos";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-const items = [
-  {
-    title: "Pages Router",
-    items: [
-      {
-        title: "Static",
-        url: "https://nextperformance.vercel.app/pages-router/static",
-      },
-      {
-        title: "Dynamic",
-        url: "https://nextperformance.vercel.app/pages-router/dynamic",
-      },
-    ],
-  },
-  {
-    title: "App Router",
-    items: [
-      {
-        title: "Static",
-        url: "https://nextperformance.vercel.app/app-router/static",
-      },
-      {
-        title: "Dynamic",
-        url: "https://nextperformance.vercel.app/app-router/dynamic",
-      },
-      {
-        title: "Suspense",
-        url: "https://nextperformance.vercel.app/app-router/suspense",
-      },
-      {
-        title: "Loading",
-        url: "https://nextperformance.vercel.app/app-router/loading",
-      },
-      {
-        title: "Edge Runtime",
-        url: "https://nextperformance.vercel.app/app-router/edge-runtime",
-      },
-      {
-        title: "Client Cache",
-        url: "/app-router/client-cache",
-      },
-      {
-        title: "Server Cache",
-        url: "https://nextperformance.vercel.app/app-router/server-cache",
-      },
-      {
-        title: "Partial Prerendering",
-        url: "https://nextperformance.vercel.app/app-router/partial-prerendering",
-      },
-      {
-        title: "Prefetch",
-        url: "https://nextperformance.vercel.app/app-router/prefetch",
-      },
-      {
-        title: "Almighty",
-        url: "https://nextperformance.vercel.app/app-router/almighty",
-      },
-    ],
-  },
-];
+import XIcon from "./svgs/x";
+import BlueskyIcon from "./svgs/bluesky";
+import GitHubIcon from "./svgs/github";
+import YouTubeIcon from "./svgs/youtube";
 
 export function AppSidebar() {
   const pathname = usePathname();
 
   return (
     <Sidebar>
-      <SidebarHeader />
+      <SidebarHeader>
+        <Link href="/" className="relative w-full h-8 mt-3">
+          <Image src="/next-performance.svg" alt="Logo" fill sizes="100px" />
+        </Link>
+      </SidebarHeader>
       <SidebarContent>
-        {items.map((group) => (
+        {demos.map((group) => (
           <SidebarGroup key={group.title}>
             <SidebarGroupLabel className="uppercase">
               {group.title}
@@ -105,7 +54,46 @@ export function AppSidebar() {
           </SidebarGroup>
         ))}
       </SidebarContent>
-      <SidebarFooter />
+      <SidebarFooter>
+        <div className="flex gap-2 justify-evenly items-start">
+          <Image
+            src="/ravi.webp"
+            alt="Ravi"
+            width={30}
+            height={30}
+            className="rounded-full border border-gray-700"
+          />
+          <Link
+            href="https://github.com/perfectbase/next-performance"
+            aria-label="GitHub"
+            className="hover:text-gray-400 transition-colors rounded"
+          >
+            <GitHubIcon width={30} height={30} />
+          </Link>
+          <Link
+            href="https://x.com/RaviCoding"
+            aria-label="X"
+            className="hover:text-gray-400 transition-colors rounded"
+          >
+            <XIcon width={30} height={30} />
+          </Link>
+          <Link
+            href="https://bsky.app/profile/ravicoding.bsky.social"
+            aria-label="Bluesky"
+            className="hover:text-gray-400 transition-colors rounded"
+          >
+            <BlueskyIcon width={30} height={30} className="px-0.5" />
+          </Link>
+          <Link
+            href="https://www.youtube.com/@perfectbase"
+            aria-label="YouTube"
+            className="hover:text-gray-400 transition-colors rounded"
+          >
+            <YouTubeIcon width={30} height={30} />
+          </Link>
+        </div>
+        <p className="text-xs text-center font-semibold">by: Ravi</p>
+      </SidebarFooter>
     </Sidebar>
   );
 }
