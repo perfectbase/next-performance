@@ -11,12 +11,12 @@ export const demos: {
     items: [
       {
         title: "Static",
-        url: "/pages-router/static",
+        url: "https://nextperformance.vercel.app/pages-router/static",
         description: "Static pages with pages router.",
       },
       {
         title: "Dynamic",
-        url: "/pages-router/dynamic",
+        url: "https://nextperformance.vercel.app/pages-router/dynamic",
         description: "Dynamic pages with pages router.",
       },
     ],
@@ -26,27 +26,27 @@ export const demos: {
     items: [
       {
         title: "Static",
-        url: "/app-router/static",
+        url: "https://nextperformance.vercel.app/app-router/static",
         description: "Static pages with app router.",
       },
       {
         title: "Dynamic",
-        url: "/app-router/dynamic",
+        url: "https://nextperformance.vercel.app/app-router/dynamic",
         description: "Dynamic pages with app router.",
       },
       {
         title: "Suspense",
-        url: "/app-router/suspense",
+        url: "https://nextperformance.vercel.app/app-router/suspense",
         description: "Using Suspense for loading state.",
       },
       {
         title: "Loading",
-        url: "/app-router/loading",
+        url: "https://nextperformance.vercel.app/app-router/loading",
         description: "Adding a loading.tsx file.",
       },
       {
         title: "Edge Runtime",
-        url: "/app-router/edge-runtime",
+        url: "https://nextperformance.vercel.app/app-router/edge-runtime",
         description: "Using the faster Edge Runtime.",
       },
       {
@@ -56,22 +56,22 @@ export const demos: {
       },
       {
         title: "Server Cache",
-        url: "/app-router/server-cache",
+        url: "https://nextperformance.vercel.app/app-router/server-cache",
         description: "Caching the dynamic content on the server-side.",
       },
       {
         title: "Partial Prerendering",
-        url: "/app-router/partial-prerendering",
+        url: "https://nextperformance.vercel.app/app-router/partial-prerendering",
         description: "Combining static and dynamic rendering.",
       },
       {
         title: "Prefetch",
-        url: "/app-router/prefetch",
+        url: "https://nextperformance.vercel.app/app-router/prefetch",
         description: "Prefetching pages for instant navigation.",
       },
       {
         title: "Almighty",
-        url: "/app-router/almighty",
+        url: "https://nextperformance.vercel.app/app-router/almighty",
         description: "Combining multiple optimizations for best performance.",
       },
     ],
