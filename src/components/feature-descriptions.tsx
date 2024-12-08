@@ -112,7 +112,12 @@ export function FeatureDescriptions(props: {
         <>
           <FeatureTags clientCache />
           <Description>
-            The client cache is enabled. The client cache is a global
+            The{" "}
+            <TextLink href="https://nextjs.org/docs/app/api-reference/next-config-js/staleTimes">
+              client cache
+            </TextLink>{" "}
+            is enabled. You might have noticed that the domain in this demo is
+            different. This is because the client cache is a global
             configuration for the app. You can configure how long the cache
             should last for static and dynamic pages in the{" "}
             <InlineCode>next.config.ts</InlineCode> file. This demo is
@@ -146,10 +151,13 @@ export function FeatureDescriptions(props: {
         <>
           <FeatureTags ppr />
           <Description>
-            This demo has partial prerendering enabled. Partial Prerendering
-            allows Next.js to combine static and dynamic content in a single
-            page, serving a static shell instantly while streaming in dynamic
-            content asynchronously.
+            This demo has{" "}
+            <TextLink href="https://nextjs.org/docs/app/building-your-application/rendering/partial-prerendering">
+              partial prerendering
+            </TextLink>{" "}
+            enabled. Partial Prerendering allows Next.js to combine static and
+            dynamic content in a single page, serving a static shell instantly
+            while streaming in dynamic content asynchronously.
             <CodeBlock language="ts" highlightLines={[3]}>
               {PPR_CODE}
             </CodeBlock>
