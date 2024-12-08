@@ -1,6 +1,6 @@
 import { AppHeader } from "./app-header";
 import { AppSidebar } from "./app-sidebar";
-import { SidebarProvider, SidebarTrigger } from "./ui/sidebar";
+import { SidebarProvider } from "./ui/sidebar";
 
 export function AppFrame({
   children,

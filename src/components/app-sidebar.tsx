@@ -22,7 +22,7 @@ import BlueskyIcon from "./svgs/bluesky";
 import GitHubIcon from "./svgs/github";
 import YouTubeIcon from "./svgs/youtube";
 import { Button } from "./ui/button";
-import { SidebarCloseIcon, X } from "lucide-react";
+import { SidebarCloseIcon } from "lucide-react";
 
 export function AppSidebar() {
   const pathname = usePathname();
