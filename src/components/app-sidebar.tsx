@@ -11,6 +11,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  useSidebar,
 } from "@/components/ui/sidebar";
 import { demos } from "@/lib/demos";
 import Image from "next/image";
@@ -20,15 +21,29 @@ import XIcon from "./svgs/x";
 import BlueskyIcon from "./svgs/bluesky";
 import GitHubIcon from "./svgs/github";
 import YouTubeIcon from "./svgs/youtube";
+import { Button } from "./ui/button";
+import { SidebarCloseIcon, X } from "lucide-react";
 
 export function AppSidebar() {
   const pathname = usePathname();
+  const { toggleSidebar } = useSidebar();
 
   return (
     <Sidebar>
       <SidebarHeader>
         <Link href="/" className="relative w-full h-8 mt-3">
           <Image src="/next-performance.svg" alt="Logo" fill sizes="100px" />
+          <Button
+            size="icon"
+            variant="ghost"
+            className="absolute top-0 right-0 md:hidden"
+            onClick={(e) => {
+              e.preventDefault();
+              toggleSidebar();
+            }}
+          >
+            <SidebarCloseIcon width={20} height={20} />
+          </Button>
         </Link>
       </SidebarHeader>
       <SidebarContent>
