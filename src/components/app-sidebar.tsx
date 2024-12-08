@@ -22,11 +22,11 @@ import BlueskyIcon from "./svgs/bluesky";
 import GitHubIcon from "./svgs/github";
 import YouTubeIcon from "./svgs/youtube";
 import { Button } from "./ui/button";
-import { SidebarCloseIcon, X } from "lucide-react";
+import { SidebarCloseIcon } from "lucide-react";
 
 export function AppSidebar() {
   const pathname = usePathname();
-  const { toggleSidebar } = useSidebar();
+  const { setOpenMobile, isMobile } = useSidebar();
 
   return (
     <Sidebar>
@@ -39,7 +39,7 @@ export function AppSidebar() {
             className="absolute top-0 right-0 md:hidden"
             onClick={(e) => {
               e.preventDefault();
-              toggleSidebar();
+              setOpenMobile(false);
             }}
           >
             <SidebarCloseIcon width={20} height={20} />
@@ -60,7 +60,16 @@ export function AppSidebar() {
                       asChild
                       isActive={pathname?.startsWith(item.url)}
                     >
-                      <Link href={item.url}>{item.title}</Link>
+                      <Link
+                        href={item.url}
+                        onClick={() => {
+                          if (isMobile) {
+                            setOpenMobile(false);
+                          }
+                        }}
+                      >
+                        {item.title}
+                      </Link>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 ))}
