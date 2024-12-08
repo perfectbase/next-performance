@@ -10,7 +10,13 @@ export default function Home() {
         <CardHeader>
           <CardTitle>About</CardTitle>
         </CardHeader>
-        <CardContent>TODO</CardContent>
+        <CardContent>
+          <p>
+            I was testing some Next.js features and how they affect navigation
+            performance. I decided to create this demo project to share it and
+            make it easier to understand the differences.
+          </p>
+        </CardContent>
         <div className="mx-6">
           <Separator />
         </div>
@@ -29,7 +35,7 @@ export default function Home() {
                     <Link
                       key={item.title}
                       href={item.url}
-                      className="block bg-muted px-5 py-3 rounded-md hover:bg-muted/80"
+                      className="block bg-muted/80 px-5 py-3 rounded-md hover:bg-muted/60"
                     >
                       <div className="font-bold">{item.title}</div>
                       <div className="text-muted-foreground text-sm mt-1.5">
